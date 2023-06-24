@@ -1,0 +1,48 @@
+.navbar {
+  height: 13%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+  margin: 0 1em;
+}
+
+.navbar>* {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .left {
+  display: flex;
+  gap: 1em;
+  color: black;
+  font-weight: 300;
+}
+
+.left .packaging {
+  padding: 1em 2em;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.left .search {
+  border-radius: 50%;
+  padding: 1em;
+  background: white;
+}
+
+.search img {
+  height: 20px;
+}
+
+.navbar .center a {
+  text-decoration: none;
+  color: white;
+  padding: 1em;
+  font-weight: 400;
+}
+
+.navbar .right {
+  fill: white;
+}
