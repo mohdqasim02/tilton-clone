@@ -46,6 +46,7 @@
   text-decoration: none;
   color: rgb(243, 241, 238);
   padding: 0.8em;
+  position: relative;
 }
 
 .navbar .right {
@@ -53,14 +54,14 @@
 }
 
 a:hover::before {
-  height: 6px;
-  width: 50px;
-  box-sizing: border-box;
+  height: 0.5em;
+  width: 100%;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
   content: "";
   position: absolute;
-  top: 0;
+  top: -80%;
+  left: 0;
   background-color: rgb(243, 241, 238);
 }
