@@ -1,3 +1,8 @@
+:root {
+  --bg-white-default: hsl(36, 17%, 94%);
+  --bg-white-darker: hsl(36, 17%, 88%);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +12,16 @@
 
 body {
   font-size: 18px;
-  color: rgb(243, 241, 238);
+  background-color: var(--bg-white-default);
+  color: var(--bg-white-default);
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+.home-view {
+  height: 100%;
+  position: relative;
+  overflow: scroll;
 }
 
 .bottom-border-radius {
@@ -27,7 +39,7 @@ body {
 }
 
 .first-page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
     url(../images/body-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -51,7 +63,7 @@ body {
 .company-dropdown {
   height: 0;
   width: 100%;
-  background-color: rgb(243, 241, 238);
+  background-color: var(--bg-white-default);
   transition: all 300ms cubic-bezier(.34, 1.18, .65, .6);
 
   display: flex;
@@ -64,17 +76,19 @@ body {
 .items {
   flex: 1 0 23%;
   height: 90%;
-  background: hsl(36, 17%, 85%);
+  background: var(--bg-white-darker);
 }
 
 .content {
   width: 100%;
-  height: 65%;
-  position: absolute;
-  top: 15%;
+  height: 0%;
+  position: sticky;
+  top: 45%;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .intro-text {
@@ -96,10 +110,12 @@ body {
   animation: standUp 1s cubic-bezier(1, .11, .4, 1.85) 0s 1;
 }
 
-.second-page,
-.introduction {
-  background-color: rgb(243, 241, 238);
-  color: black;
+.second-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(../images/bowl-image.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
 @keyframes standUp {
